@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CWIAL No. 1 — Cognitive Warfare Information Analysis Laboratory</title>
+<meta name="description" content="A metrology laboratory for cognitive warfare. Every published figure is traceable to a named source, and every quantity not yet measured is declared as unmeasured.">
+<meta property="og:title" content="CWIAL No. 1 — Cognitive Warfare Information Analysis Laboratory">
+<meta property="og:description" content="Applying VIM, GUM and ISO/IEC 17025 to the measurement of belief displacement.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --paper:#F7F7F5;
+  --ink:#14161A;
+  --navy:#1A2E4A;
+  --steel:#2E5C8A;
+  --verified:#0F6E56;
+  --pending:#A8760F;
+  --alert:#A33A38;
+  --rule:#D9D8D2;
+  --rule-strong:#B4B2AA;
+  --sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* ---------- masthead ---------- */
+.masthead{border-bottom:1px solid var(--rule-strong);position:sticky;top:0;background:var(--paper);z-index:20}
+.masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.brand{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);font-weight:600}
+.brand span{color:var(--steel);font-weight:400}
+.masthead nav{display:flex;gap:20px;flex-wrap:wrap}
+.masthead a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:#5E5C57;text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
+.masthead a:hover,.masthead a:focus-visible{color:var(--navy);border-bottom-color:var(--steel)}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 52px;border-bottom:1px solid var(--rule)}
+.hero h1{
+  font-size:clamp(30px,5.2vw,46px);line-height:1.12;font-weight:650;
+  letter-spacing:-.022em;color:var(--navy);max-width:16ch;margin-bottom:22px;
+}
+.hero h1 em{font-style:normal;color:var(--alert)}
+.hero p{font-size:17px;max-width:60ch;color:#3A3B3F}
+.identity{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.identity div{background:var(--paper);padding:12px 14px}
+.identity dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:#75736D;margin-bottom:3px}
+.identity dd{font-size:14px;color:var(--ink)}
+
+/* ---------- sections ---------- */
+section{padding:52px 0;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:none}
+.clause{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--steel);margin-bottom:10px;display:block}
+h2{font-size:26px;line-height:1.25;letter-spacing:-.015em;font-weight:640;color:var(--navy);margin-bottom:8px}
+.standfirst{font-size:15.5px;color:#55565B;max-width:62ch;margin-bottom:30px}
+h3{font-size:15px;font-weight:640;color:var(--navy);margin:32px 0 10px}
+p+p{margin-top:12px}
+
+/* ---------- finding ---------- */
+.finding{border-left:3px solid var(--alert);background:#FBF1F0;padding:18px 20px;margin-bottom:30px}
+.finding .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--alert);font-weight:600;display:block;margin-bottom:7px}
+.finding p{font-size:15.5px;color:var(--ink)}
+.finding strong{font-family:var(--mono);font-weight:600;font-size:15px}
+
+/* ---------- proposition ---------- */
+.prop{border:1px solid var(--rule-strong);margin-bottom:22px}
+.prop-row{padding:14px 18px;border-bottom:1px solid var(--rule)}
+.prop-row:last-child{border-bottom:none}
+.prop-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:5px}
+.prop-claim{font-size:16px;font-style:italic;color:var(--ink)}
+.prop-truth{font-size:14px;color:#4A4B4F}
+
+/* ---------- figure ---------- */
+figure{margin:34px 0}
+figcaption{font-family:var(--mono);font-size:11px;color:#75736D;margin-top:10px;line-height:1.55}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
+.legend span{font-family:var(--mono);font-size:11px;color:#5E5C57;display:flex;align-items:center;gap:6px}
+.key{width:10px;height:10px;flex:0 0 auto;border-radius:2px}
+svg{display:block;width:100%;height:auto}
+
+/* ---------- table ---------- */
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+caption{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--steel);padding-bottom:10px}
+th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#75736D;font-weight:500;padding:8px 10px;border-bottom:1px solid var(--rule-strong)}
+td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.anchor td{background:#EFF3F8;font-weight:600}
+.bloc{font-family:var(--mono);font-size:10px;padding:2px 6px;border:1px solid currentColor;border-radius:2px;white-space:nowrap}
+.bloc-a{color:var(--steel)}.bloc-b{color:var(--pending)}.bloc-c{color:var(--alert)}
+.muted{color:#87857F}
+
+/* ---------- readout ---------- */
+.readout{border:1px solid var(--rule-strong);margin:0 0 22px}
+.readout dl{display:grid;grid-template-columns:1fr auto;font-family:var(--mono);font-size:13.5px}
+.readout dt{padding:9px 18px;border-bottom:1px solid var(--rule);color:#4A4B4F;font-family:var(--sans);font-size:14px}
+.readout dd{padding:9px 18px;border-bottom:1px solid var(--rule);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.readout dt:nth-last-of-type(1),.readout dd:nth-last-of-type(1){border-bottom:none}
+.val-key{color:var(--verified);font-weight:600;font-size:15px}
+.val-none{color:var(--pending)}
+.provenance{font-size:12.5px;color:#75736D;padding:12px 18px;background:#F1F1EE;border-top:1px solid var(--rule)}
+
+/* ---------- signature: unmeasured panel ---------- */
+.unmeasured{border:1.5px dashed var(--pending);padding:20px 22px;margin-top:34px;background:#FCF8F0}
+.unmeasured .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--pending);font-weight:600;display:block;margin-bottom:12px}
+.unmeasured dl{display:grid;grid-template-columns:1fr auto;gap:0;font-size:14px}
+.unmeasured dt{padding:7px 0;border-bottom:1px dotted var(--rule-strong);color:#4A4B4F}
+.unmeasured dd{padding:7px 0;border-bottom:1px dotted var(--rule-strong);text-align:right;font-family:var(--mono);font-size:13px;color:var(--pending)}
+.unmeasured p{font-size:13.5px;color:#6B6960;margin-top:14px}
+
+/* ---------- steps ---------- */
+ol.steps{list-style:none;counter-reset:s;margin-top:8px}
+ol.steps li{counter-increment:s;padding:16px 0 16px 52px;border-bottom:1px solid var(--rule);position:relative}
+ol.steps li:last-child{border-bottom:none}
+ol.steps li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:0;top:16px;
+  font-family:var(--mono);font-size:12px;color:var(--steel);letter-spacing:.04em;
+}
+ol.steps b{display:block;font-size:15px;color:var(--navy);margin-bottom:3px}
+ol.steps span{font-size:14.5px;color:#4A4B4F}
+
+/* ---------- publications ---------- */
+.pubs{list-style:none}
+.pubs li{padding:15px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline}
+.pubs li:last-child{border-bottom:none}
+.pubs .venue{font-family:var(--mono);font-size:11px;color:var(--steel);letter-spacing:.03em;white-space:nowrap}
+.pubs .title{font-size:15px;color:var(--ink)}
+.pubs .meta{display:block;font-family:var(--mono);font-size:11.5px;color:#87857F;margin-top:3px}
+@media(max-width:640px){.pubs li{grid-template-columns:1fr;gap:4px}}
+
+/* ---------- roles ---------- */
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:8px}
+.roles div{background:var(--paper);padding:16px 18px}
+.roles h4{font-size:14px;font-weight:640;color:var(--navy);margin-bottom:5px}
+.roles p{font-size:13.5px;color:#55565B}
+
+/* ---------- contact ---------- */
+.contact{border:1px solid var(--navy);padding:22px 24px;margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.contact p{font-size:15px;color:var(--ink)}
+.contact a{font-family:var(--mono);font-size:14px;color:var(--navy);font-weight:600;text-decoration:none;border-bottom:2px solid var(--steel);padding-bottom:1px}
+.contact a:hover,.contact a:focus-visible{color:var(--steel)}
+
+/* ---------- footer ---------- */
+footer{padding:34px 0 46px;font-size:12.5px;color:#75736D}
+footer p+p{margin-top:8px}
+footer a{color:#5E5C57}
+
+a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand">CWIAL <span>No.&nbsp;1</span></div>
+    <nav>
+      <a href="#report">Monthly report</a>
+      <a href="#method">Method</a>
+      <a href="#publications">Publications</a>
+      <a href="#join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>We publish what we measured, the uncertainty on it, and <em>what we have not measured.</em></h1>
+    <p>CWIAL No.&nbsp;1 applies formal measurement science — the International Vocabulary of Metrology, the GUM uncertainty framework, and ISO/IEC&nbsp;17025 — to belief displacement in the information environment. Every figure here is traceable to a named source. Every quantity we have not yet evaluated is stated as unevaluated rather than omitted.</p>
+    <dl class="identity">
+      <div><dt>Framework</dt><dd>CWIMF</dd></div>
+      <div><dt>Measurands</dt><dd>BDI · NCS · CAV · ISRG</dd></div>
+      <div><dt>Reference standard</dt><dd>VFRB</dd></div>
+      <div><dt>Host institution</dt><dd>Faculty of Technical Sciences, Novi Sad</dd></div>
+    </dl>
+  </div>
+</div>
+
+<section id="report">
+  <div class="wrap">
+    <span class="clause">§7.8 — Reporting of results · Monthly report No. 1</span>
+    <h2>GM food safety beliefs in Europe</h2>
+    <p class="standfirst">A measurement error in the public record, and one anchor measurement that survives it.</p>
+
+    <div class="finding">
+      <span class="tag">Principal finding</span>
+      <p>The widely cited collapse in European concern about GM food — from <strong>63%&nbsp;(2005)</strong> to <strong>27%&nbsp;(2019)</strong> — spans an undocumented change of survey instrument. On the instrument used in 2005 and 2010, the readings were 63% and 66%: essentially unchanged. The 2019 and 2022 waves switched to a different question format that mechanically lowers every item on the list. No part of the apparent decline can be attributed to belief change until the two formats are harmonised. In metrological terms, an uncharacterised change in the measuring instrument was read as a change in the measurand.</p>
+    </div>
+
+    <div class="prop">
+      <div class="prop-row">
+        <div class="prop-label" style="color:var(--alert)">Tested claim — proposition F</div>
+        <div class="prop-claim">“Consuming approved GM food is dangerous to human health.”</div>
+      </div>
+      <div class="prop-row">
+        <div class="prop-label" style="color:var(--verified)">Verified true value V(F) = FALSE · VFRB tier 1</div>
+        <div class="prop-truth">The World Health Organization, the EFSA GMO Panel, and the US National Academies of Sciences, Engineering and Medicine (2016 review) each conclude that approved GM foods on the market present no greater risk to human health than their conventional counterparts.</div>
+      </div>
+    </div>
+
+    <figure>
+      <div class="legend">
+        <span><i class="key" style="background:#2E5C8A"></i>Health-agreement item</span>
+        <span><i class="key" style="background:#A8760F"></i>Concern-rating item</span>
+        <span><i class="key" style="background:#A33A38"></i>Selection-from-list item</span>
+      </div>
+      <svg viewBox="0 0 760 280" role="img" aria-label="Chart of published Eurobarometer readings from 2005 to 2022 grouped by question format. Concern-rating readings are 63 percent in 2005 and 66 percent in 2010. A health-agreement reading is 59 percent in 2010. A selection-from-list reading is 27 percent in 2019, after a marked change of instrument. The 2022 reading is pending.">
+        <g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11" fill="#87857F">
+          <text x="46" y="236" text-anchor="end">0%</text>
+          <text x="46" y="188" text-anchor="end">20%</text>
+          <text x="46" y="140" text-anchor="end">40%</text>
+          <text x="46" y="92" text-anchor="end">60%</text>
+          <text x="46" y="44" text-anchor="end">80%</text>
+        </g>
+        <g stroke="#D9D8D2" stroke-width="1">
+          <line x1="56" y1="232" x2="740" y2="232"/>
+          <line x1="56" y1="184" x2="740" y2="184"/>
+          <line x1="56" y1="136" x2="740" y2="136"/>
+          <line x1="56" y1="88" x2="740" y2="88"/>
+          <line x1="56" y1="40" x2="740" y2="40"/>
+        </g>
+        <line x1="56" y1="40" x2="56" y2="232" stroke="#B4B2AA" stroke-width="1"/>
+
+        <line x1="452" y1="34" x2="452" y2="240" stroke="#A33A38" stroke-width="1.5" stroke-dasharray="5,4"/>
+        <text x="460" y="50" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11" fill="#A33A38" font-weight="600">INSTRUMENT CHANGED</text>
+        <text x="460" y="66" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="10.5" fill="#87857F">rating scale → selection from 15</text>
+
+        <line x1="150" y1="80" x2="352" y2="72" stroke="#A8760F" stroke-width="2"/>
+        <circle cx="150" cy="80" r="6" fill="#A8760F"/>
+        <circle cx="352" cy="72" r="6" fill="#A8760F"/>
+        <text x="150" y="64" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" font-weight="600" fill="#A8760F">63%</text>
+        <text x="352" y="56" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" font-weight="600" fill="#A8760F">66%</text>
+
+        <circle cx="386" cy="90" r="6" fill="#2E5C8A"/>
+        <text x="400" y="95" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" font-weight="600" fill="#2E5C8A">59%</text>
+
+        <circle cx="586" cy="167" r="6" fill="#A33A38"/>
+        <text x="586" y="151" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" font-weight="600" fill="#A33A38">27%</text>
+
+        <circle cx="690" cy="167" r="6" fill="none" stroke="#A33A38" stroke-width="1.5" stroke-dasharray="3,2.5"/>
+        <text x="690" y="151" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="10.5" fill="#87857F">pending</text>
+
+        <g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11.5" fill="#5E5C57" text-anchor="middle">
+          <text x="150" y="258">2005</text>
+          <text x="369" y="258">2010</text>
+          <text x="586" y="258">2019</text>
+          <text x="690" y="258">2022</text>
+        </g>
+      </svg>
+      <figcaption>Published Eurobarometer readings, grouped by the instrument that produced them. Readings from different formats are not on a common scale and are not joined.</figcaption>
+    </figure>
+
+    <div class="tablewrap">
+      <table>
+        <caption>Source record</caption>
+        <thead>
+          <tr><th scope="col">Wave</th><th scope="col">Question format</th><th scope="col">Reading</th><th scope="col">n</th><th scope="col">Bloc</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>EB 64.3 (2005)</td><td>Concern rating — GM ingredients</td><td class="num">63%</td><td class="num">~25,000</td><td><span class="bloc bloc-b">B</span></td></tr>
+          <tr><td>EFSA wave (2010)</td><td>Concern rating — GM ingredients</td><td class="num">66%</td><td class="num">26,691</td><td><span class="bloc bloc-b">B</span></td></tr>
+          <tr class="anchor"><td>EB 73.1 (2010)</td><td>Health agreement — “not safe for you and your family”</td><td class="num">59%</td><td class="num">31,238</td><td><span class="bloc bloc-a">A</span></td></tr>
+          <tr><td>Special EB (2019)</td><td>Selection from 15-item concern list</td><td class="num">27%</td><td class="num">27,655</td><td><span class="bloc bloc-c">C</span></td></tr>
+          <tr><td>Special EB (2022)</td><td>Selection from 15-item concern list</td><td class="num muted">pending</td><td class="num">26,509</td><td><span class="bloc bloc-c">C</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Anchor measurement</h3>
+    <p>One wave asks directly about health safety and therefore maps onto proposition F without a bridging assumption. It is the only wave from which a belief displacement can currently be computed.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 132" role="img" aria-label="Belief displacement scale from zero to plus one. The 2010 anchor measurement sits at plus 0.59. The Type A uncertainty of 0.004 is smaller than the marker. The Type B contribution has not been evaluated, so the true interval is undefined.">
+        <line x1="60" y1="60" x2="700" y2="60" stroke="#B4B2AA" stroke-width="1.5"/>
+        <line x1="60" y1="52" x2="60" y2="68" stroke="#0F6E56" stroke-width="2"/>
+        <text x="60" y="88" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11.5" fill="#0F6E56">0 · aligned with truth</text>
+        <line x1="700" y1="52" x2="700" y2="68" stroke="#B4B2AA" stroke-width="1.5"/>
+        <text x="700" y="88" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11.5" fill="#87857F">+1</text>
+
+        <rect x="437" y="46" width="122" height="28" fill="#A8760F" fill-opacity="0.13"/>
+        <text x="498" y="112" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="10.5" fill="#A8760F">Type B not evaluated — interval undefined</text>
+
+        <line x1="437" y1="46" x2="437" y2="74" stroke="#A8760F" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="559" y1="46" x2="559" y2="74" stroke="#A8760F" stroke-width="1" stroke-dasharray="3,3"/>
+
+        <line x1="437" y1="60" x2="559" y2="60" stroke="#A8760F" stroke-width="1.5" stroke-dasharray="4,4"/>
+        <circle cx="438" cy="60" r="7" fill="#2E5C8A"/>
+        <text x="438" y="36" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" font-weight="600" fill="#2E5C8A">BDI = +0.59</text>
+      </svg>
+      <figcaption>The Type A uncertainty on this reading is 0.004 — narrower than the marker itself. The dashed region is not a confidence interval. It marks the absence of one.</figcaption>
+    </figure>
+
+    <div class="readout">
+      <dl>
+        <dt>Belief prevalence p — EB 73.1, 2010</dt><dd>0.59</dd>
+        <dt>Aligned prevalence p⁰, where V(F) = FALSE</dt><dd>0</dd>
+        <dt>BDI = p − p⁰</dt><dd class="val-key">+0.59</dd>
+        <dt>Type A uncertainty u<sub>A</sub> (D<sub>eff</sub> = 1.8, declared)</dt><dd>0.004</dd>
+        <dt>Type B components u<sub>B1</sub>…u<sub>B5</sub></dt><dd class="val-none">not evaluated</dd>
+        <dt>Expanded uncertainty U (k = 2)</dt><dd class="val-none">—</dd>
+      </dl>
+      <p class="provenance">Source: Gaskell et&nbsp;al., <em>Europeans and Biotechnology in 2010</em>, Eurobarometer 73.1, n&nbsp;=&nbsp;31,238. Topic awareness 84%. The design effect is a declared assumption, not a measured value.</p>
+    </div>
+
+    <div class="unmeasured">
+      <span class="tag">Not yet measured — and therefore not stated</span>
+      <dl>
+        <dt>Type B components for this survey series</dt><dd>—</dd>
+        <dt>Combined and expanded uncertainty</dt><dd>—</dd>
+        <dt>Harmonisation term across the 2010→2019 format change</dt><dd>—</dd>
+        <dt>Cognitive Attack Velocity</dt><dd>—</dd>
+        <dt>Minimum detectable displacement</dt><dd>—</dd>
+        <dt>Projected time to threshold</dt><dd>—</dd>
+        <dt>Per-country breakdowns and the 1996 and 1999 waves</dt><dd>—</dd>
+      </dl>
+      <p>These quantities require the full empirical study now in preparation. A number stated before it is measured is not a measurement, and this laboratory does not publish one.</p>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <span class="clause">§7.2 — Selection and validation of methods</span>
+    <h2>How a measurement is made</h2>
+    <p class="standfirst">Five stages, in order. Each one has to complete before the next is meaningful.</p>
+    <ol class="steps">
+      <li><b>Anchor the claim</b><span>Match the claim to a Verified Factual Reference Base entry: a proposition with a stated truth value, a documented source chain of at least three independent Grade&nbsp;I–II sources, and a re-verification date.</span></li>
+      <li><b>Define the population and the instrument</b><span>State exactly who is being measured and with what. A survey question format is an instrument; changing it changes the reading. This is where most published trend claims fail.</span></li>
+      <li><b>Compute the displacement</b><span>Belief prevalence minus the prevalence that would align with the verified truth. For a verified-false proposition this is the prevalence itself.</span></li>
+      <li><b>Build the uncertainty budget</b><span>Type A from the sampling. Type B for reference classification risk, instrument bias, temporal mismatch, representativeness, and adversarial adaptation. Combine per GUM.</span></li>
+      <li><b>Report, including the gaps</b><span>An ISO/IEC 17025 clause 7.8 report: measurand, reference, method, budget, result with coverage factor, detection capability, and an explicit statement of what was not evaluated.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <span class="clause">Publications</span>
+    <h2>The method, written down</h2>
+    <p class="standfirst">M. Urekar · Faculty of Technical Sciences, University of Novi Sad · ORCID 0000-0002-6089-9148</p>
+    <ul class="pubs">
+      <li>
+        <span class="venue">IcETRAN 2026</span>
+        <span class="title">Ten Metrological Principles for Understanding and Countering Cognitive Warfare
+          <span class="meta">Published · doi 10.69994/13Ic26xxx</span></span>
+      </li>
+      <li>
+        <span class="venue">Conference</span>
+        <span class="title">CWIMF: Architecture, Components, and Institutional Design
+          <span class="meta">Framework architecture and institutional design</span></span>
+      </li>
+      <li>
+        <span class="venue">Conference</span>
+        <span class="title">Information Integrity as a Metrological Requirement: Misinformation Risks in ISO/IEC 17025 Laboratories Through the OODA Decision Loop
+          <span class="meta">Laboratory information integrity</span></span>
+      </li>
+      <li>
+        <span class="venue">Journal · submitted</span>
+        <span class="title">CWIMF: A Formal Measurement Architecture Based on VIM, GUM, and ISO/IEC 17025
+          <span class="meta">Full specification · worked uncertainty budget · Monte Carlo validation</span></span>
+      </li>
+      <li>
+        <span class="venue">In preparation</span>
+        <span class="title">Quantifying Belief Displacement in European GMO Safety Discourse: A Longitudinal Metrological Re-Audit of the Eurobarometer Record
+          <span class="meta">The empirical study behind this month's report</span></span>
+      </li>
+      <li>
+        <span class="venue">In preparation</span>
+        <span class="title">Calibrating Large Language Models as Narrative Coherence Scoring Instruments
+          <span class="meta">Proposed validation framework · specification, not measurement</span></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <span class="clause">§6.2 — Personnel</span>
+    <h2>Join the laboratory</h2>
+    <p class="standfirst">No prior expertise in cognitive warfare is required. The measurement discipline is learnable; the willingness to state what you do not know is the harder part.</p>
+    <div class="roles">
+      <div><h4>Reference curator</h4><p>Build and verify VFRB entries. Source evaluation and provenance chains.</p></div>
+      <div><h4>Instrument engineer</h4><p>Calibrate the classifiers that score factual consistency. Python and basic ML.</p></div>
+      <div><h4>Survey methodologist</h4><p>Instrument design, Type A uncertainty, design-effect corrections.</p></div>
+      <div><h4>Adversarial analyst</h4><p>Model how attackers adapt to being measured. The most open-ended role.</p></div>
+      <div><h4>Case researcher</h4><p>Apply the toolkit to documented cases. Each case study is a publishable paper.</p></div>
+    </div>
+    <div class="contact">
+      <p><strong>Interested in contributing?</strong><br>Marjan Urekar · Faculty of Technical Sciences, University of Novi Sad</p>
+      <a href="mailto:urekarm@uns.ac.rs">urekarm@uns.ac.rs</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>CWIAL No. 1 · Department of Power, Electronics and Telecommunications, Faculty of Technical Sciences, University of Novi Sad, Republic of Serbia.</p>
+    <p>Supported by the Ministry of Science, Technological Development and Innovation of the Republic of Serbia, Contract No. 451-03-34/2026-03/200156.</p>
+    <p>This laboratory is independent and does not represent the position of any government, military, or international organisation.</p>
+  </div>
+</footer>
+
+</body>
+</html>
