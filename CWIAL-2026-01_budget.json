@@ -1,0 +1,92 @@
+{
+  "summary": {
+    "report_id": "PERIALETHEIA-CWIAL-2026-01",
+    "measurand": "Belief displacement D for the proposition: 'Consuming approved GM food is dangerous to human health' (FALSE, Tier-1 verified: WHO/EFSA/NASEM)",
+    "anchor_wave": "Eurobarometer 73.1 (2010), health-safety agreement item",
+    "D": 0.59,
+    "n": 31238,
+    "design_effect": 1.8,
+    "combined_standard_uncertainty_uc": 0.0544,
+    "coverage_factor_k": 2,
+    "expanded_uncertainty_U": 0.1088,
+    "decision": "|D|/U = 5.42  (distinguishable from zero: yes)",
+    "verdict_ratio": 5.42,
+    "standards": [
+      "VIM (JCGM 200:2012)",
+      "GUM (JCGM 100:2008)",
+      "ISO/IEC 17025:2017",
+      "Currie 1968 / ISO 11843-1:1997"
+    ],
+    "units": "belief displacement units (proportion agreeing), range -1..+1",
+    "status": "WORKING ANNEX - provisional Type B evaluation, under review; not the published on-page reading",
+    "note": "The published Report No. 1 states the anchor reading (D=+0.59) with Type A only and declares the Type B budget as not yet finalised. This annex provides the working Type B evaluation for independent scrutiny."
+  },
+  "components": [
+    {
+      "component": "u_A",
+      "source": "Sampling (design-adjusted)",
+      "type": "A",
+      "distribution": "-",
+      "input": "p(1-p)/n, D_eff=1.8",
+      "divisor": "-",
+      "standard_uncertainty": 0.0037,
+      "variance_share_pct": 0.47,
+      "note": "Type A from reported n and design effect"
+    },
+    {
+      "component": "u_B1",
+      "source": "Response classification",
+      "type": "B",
+      "distribution": "-",
+      "input": "classification risk <=0.01",
+      "divisor": "1",
+      "standard_uncertainty": 0.01,
+      "variance_share_pct": 3.38,
+      "note": "Bound on mapping respondents to belief classes"
+    },
+    {
+      "component": "u_B2",
+      "source": "Question-wording / instrument",
+      "type": "B",
+      "distribution": "Normal",
+      "input": "half-width 0.10",
+      "divisor": "1.96",
+      "standard_uncertainty": 0.05,
+      "variance_share_pct": 84.47,
+      "note": "Dominant term: undocumented change of survey instrument"
+    },
+    {
+      "component": "u_B3",
+      "source": "Translation / cross-country",
+      "type": "B",
+      "distribution": "Rectangular",
+      "input": "0.017",
+      "divisor": "1.732",
+      "standard_uncertainty": 0.0098,
+      "variance_share_pct": 3.25,
+      "note": "Semantic drift across language versions"
+    },
+    {
+      "component": "u_B4",
+      "source": "Temporal comparability",
+      "type": "B",
+      "distribution": "Rectangular",
+      "input": "0.026",
+      "divisor": "1.732",
+      "standard_uncertainty": 0.015,
+      "variance_share_pct": 7.61,
+      "note": "Non-simultaneous fieldwork across waves"
+    },
+    {
+      "component": "u_B5",
+      "source": "Residual (e.g. coordinated campaign)",
+      "type": "B",
+      "distribution": "Triangular",
+      "input": "0.012",
+      "divisor": "2.449",
+      "standard_uncertainty": 0.0049,
+      "variance_share_pct": 0.81,
+      "note": "Residual component incl. coordinated influence"
+    }
+  ]
+}

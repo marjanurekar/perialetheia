@@ -1,0 +1,12 @@
+# STATUS: WORKING ANNEX - provisional Type B evaluation, under review; not the published on-page reading
+# Perialetheia CWIAL Report No.1 - GMO safety belief displacement - uncertainty budget
+# Measurand:,"Belief displacement D for the proposition: 'Consuming approved GM food is dangerous to human health' (FALSE, Tier-1 verified: WHO/EFSA/NASEM)"
+# D =,0.59,u_c =,0.0544,U (k=2) =,0.1088,|D|/U =,5.42
+
+component,source,type,distribution,input,divisor,standard_uncertainty,variance_share_pct,note
+u_A,Sampling (design-adjusted),A,-,"p(1-p)/n, D_eff=1.8",-,0.0037,0.47,Type A from reported n and design effect
+u_B1,Response classification,B,-,classification risk <=0.01,1,0.01,3.38,Bound on mapping respondents to belief classes
+u_B2,Question-wording / instrument,B,Normal,half-width 0.10,1.96,0.05,84.47,Dominant term: undocumented change of survey instrument
+u_B3,Translation / cross-country,B,Rectangular,0.017,1.732,0.0098,3.25,Semantic drift across language versions
+u_B4,Temporal comparability,B,Rectangular,0.026,1.732,0.015,7.61,Non-simultaneous fieldwork across waves
+u_B5,Residual (e.g. coordinated campaign),B,Triangular,0.012,2.449,0.0049,0.81,Residual component incl. coordinated influence

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Perialetheia — Cognitive Warfare Information Analysis Laboratory No. 1</title>
+<title>Perialetheia - Cognitive Warfare Information Analysis Laboratory No. 1</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%231A2E4A%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2229%22%20fill%3D%22none%22%20stroke%3D%22%23F7F7F5%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%22123%2059%22%20transform%3D%22rotate%28-118%2050%2050%29%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2229%22%20fill%3D%22none%22%20stroke%3D%22%23E8B85B%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%228%2011%22%20stroke-dashoffset%3D%22-125%22%20transform%3D%22rotate%28-118%2050%2050%29%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%229%22%20fill%3D%22%23F7F7F5%22%2F%3E%3C%2Fsvg%3E">
 <meta name="description" content="Perialetheia. A metrology laboratory for cognitive warfare. Every published figure is traceable to a named source, and every quantity not yet measured is declared as unmeasured.">
-<meta property="og:title" content="Perialetheia — Cognitive Warfare Information Analysis Laboratory No. 1">
+<meta property="og:title" content="Perialetheia - Cognitive Warfare Information Analysis Laboratory No. 1">
 <meta property="og:description" content="Applying VIM, GUM and ISO/IEC 17025 to the measurement of belief displacement.">
 <meta property="og:type" content="website">
 <style>
@@ -159,6 +159,39 @@ ol.steps span{font-size:14.5px;color:#4A4B4F}
 .rn-status{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--verified);border:1px solid currentColor;border-radius:2px;padding:1px 6px}
 .rn-status.rn-pending{color:var(--pending)}
 
+
+/* ---------- data / reproducibility ---------- */
+.repro{margin-top:44px;padding-top:34px;border-top:2px solid var(--rule-strong)}
+.repro h3{font-size:20px;color:var(--navy);margin:8px 0 10px}
+.repro-lead{font-size:14.5px;color:#4A4B4F;line-height:1.6;max-width:70ch;margin-bottom:24px}
+.dl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:30px}
+.dl{display:block;border:1px solid var(--rule-strong);background:var(--paper);padding:16px 18px;text-decoration:none;transition:border-color .15s,background .15s}
+.dl:hover,.dl:focus-visible{border-color:var(--navy);background:#FCFCFB}
+.dl-fmt{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;color:var(--paper);background:var(--navy);padding:2px 7px;border-radius:2px;margin-bottom:9px}
+.dl-name{display:block;font-size:15px;color:var(--ink);font-weight:600;margin-bottom:5px}
+.dl-desc{display:block;font-size:12.5px;color:#6B6960;line-height:1.5}
+/* citation */
+.cite{border:1px solid var(--rule-strong);background:#F7F7F5;padding:20px 22px}
+.cite-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.cite-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);font-weight:600}
+.cite-id{font-family:var(--mono);font-size:11px;color:var(--steel)}
+.cite-plain{font-size:13.5px;color:#4A4B4F;line-height:1.6;margin-bottom:16px}
+.cite-tabs{display:flex;gap:6px;margin-bottom:0}
+.cite-tab{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--steel);background:none;border:1px solid var(--rule-strong);border-bottom:none;padding:6px 14px;cursor:pointer}
+.cite-tab.is-active{color:var(--navy);font-weight:600;background:var(--ink-bg,#EFEFEC)}
+.cite-block{font-family:var(--mono);font-size:12px;line-height:1.55;color:#33353A;background:#EFEFEC;border:1px solid var(--rule-strong);padding:14px 16px;overflow-x:auto;white-space:pre;margin:0}
+.cite-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.cite-copy{font-family:var(--mono);font-size:11.5px;color:var(--paper);background:var(--navy);border:1px solid var(--navy);padding:7px 14px;cursor:pointer;text-decoration:none;display:inline-block}
+.cite-copy.alt{color:var(--navy);background:none}
+.cite-copy:hover{background:var(--steel);border-color:var(--steel);color:var(--paper)}
+/* ---------- standards ---------- */
+.std-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:26px 0 6px}
+.std{border:1px solid var(--rule-strong);border-left:3px solid var(--verified);padding:16px 18px;background:var(--paper)}
+.std-ref{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--verified);letter-spacing:.03em}
+.std-name{display:block;font-size:14.5px;color:var(--ink);font-weight:600;margin:5px 0 8px}
+.std p{font-size:13px;color:#55565B;line-height:1.55}
+.std-note{font-size:13.5px;color:#6B6960;font-style:italic;margin-top:20px}
+
 /* ---------- publications ---------- */
 .pubs{list-style:none}
 .pubs li{padding:15px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline}
@@ -191,7 +224,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
 
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="#" aria-label="Perialetheia — home">
+    <a class="brand" href="#" aria-label="Perialetheia - home">
       <svg class="brandmark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
         <circle cx="50" cy="50" r="33" fill="none" stroke="#1A2E4A" stroke-width="9" stroke-linecap="round" stroke-dasharray="140 67" transform="rotate(-118 50 50)"/>
         <circle cx="50" cy="50" r="33" fill="none" stroke="#A8760F" stroke-width="9" stroke-linecap="round" stroke-dasharray="9 12" stroke-dashoffset="-142" transform="rotate(-118 50 50)"/>
@@ -204,6 +237,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
       <a href="#about">About</a>
       <a href="#report">Monthly report</a>
       <a href="#method">Method</a>
+      <a href="#standards">Standards</a>
       <a href="#publications">Publications</a>
       <a href="#join">Join</a>
     </nav>
@@ -223,9 +257,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
       <svg class="herologo-word" viewBox="0 0 1261.6 100" fill="#1A2E4A" aria-label="Perialetheia" role="img"><g transform="scale(0.06978367062107467) translate(0,1433) scale(1,-1)"><path transform="translate(0,0)" d="M403 1327V766H657Q798 766 875.0 839.0Q952 912 952 1047Q952 1181 875.0 1254.0Q798 1327 657 1327ZM201 1493H657Q908 1493 1036.5 1379.5Q1165 1266 1165 1047Q1165 826 1036.5 713.0Q908 600 657 600H403V0H201Z"/><path transform="translate(1562,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(3183,0)" d="M909 700Q974 678 1035.5 606.0Q1097 534 1159 408L1364 0H1147L956 383Q882 533 812.5 582.0Q743 631 623 631H403V0H201V1493H657Q913 1493 1039.0 1386.0Q1165 1279 1165 1063Q1165 922 1099.5 829.0Q1034 736 909 700ZM403 1327V797H657Q803 797 877.5 864.5Q952 932 952 1063Q952 1194 877.5 1260.5Q803 1327 657 1327Z"/><path transform="translate(4933,0)" d="M201 1493H403V0H201Z"/><path transform="translate(5864,0)" d="M700 1294 426 551H975ZM586 1493H815L1384 0H1174L1038 383H365L229 0H16Z"/><path transform="translate(7592,0)" d="M201 1493H403V170H1130V0H201Z"/><path transform="translate(9060,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(10681,0)" d="M-6 1493H1257V1323H727V0H524V1323H-6Z"/><path transform="translate(12259,0)" d="M201 1493H403V881H1137V1493H1339V0H1137V711H403V0H201Z"/><path transform="translate(14126,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(15747,0)" d="M201 1493H403V0H201Z"/><path transform="translate(16678,0)" d="M700 1294 426 551H975ZM586 1493H815L1384 0H1174L1038 383H365L229 0H16Z"/></g></svg>
       <div class="herologo-sub">Cognitive Warfare Information Analysis Laboratory No.&nbsp;1</div>
     </div>
-    <h1>We publish what we measured,
-      the uncertainty on it, and
-      <em>what we have not measured.</em></h1>
+    <h1>We publish what we measured, the uncertainty on it, and <em>what we have not measured.</em></h1>
     <p>Perialetheia applies formal measurement science - the International Vocabulary of Metrology, the GUM uncertainty framework, and ISO/IEC&nbsp;17025 - to belief displacement in the information environment. Every figure here is traceable to a named source. Every quantity we have not yet evaluated is stated as unevaluated rather than omitted.</p>
     <dl class="identity">
       <div><dt>Framework</dt><dd>CWIMF</dd></div>
@@ -243,7 +275,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
     <div class="launch-motif"><svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140" role="img" aria-label="A ring bearing a uniform inscription of dots in which one mark is a displaced square touching the ring"><circle cx="70" cy="70" r="50" fill="none" stroke="#1A2E4A" stroke-width="2.4"/><circle cx="70" cy="70" r="38" fill="none" stroke="#1A2E4A" stroke-width="2.4"/><circle cx="70.0" cy="26.0" r="2.6" fill="#1A2E4A"/><circle cx="86.8" cy="29.3" r="2.6" fill="#1A2E4A"/><circle cx="101.1" cy="38.9" r="2.6" fill="#1A2E4A"/><circle cx="110.7" cy="53.2" r="2.6" fill="#1A2E4A"/><circle cx="114.0" cy="70.0" r="2.6" fill="#1A2E4A"/><rect x="-2.3" y="-2.3" width="4.6" height="4.6" fill="#1A2E4A" transform="translate(112.1,87.4) rotate(68)"/><circle cx="101.1" cy="101.1" r="2.6" fill="#1A2E4A"/><circle cx="86.8" cy="110.7" r="2.6" fill="#1A2E4A"/><circle cx="70.0" cy="114.0" r="2.6" fill="#1A2E4A"/><circle cx="53.2" cy="110.7" r="2.6" fill="#1A2E4A"/><circle cx="38.9" cy="101.1" r="2.6" fill="#1A2E4A"/><circle cx="29.3" cy="86.8" r="2.6" fill="#1A2E4A"/><circle cx="26.0" cy="70.0" r="2.6" fill="#1A2E4A"/><circle cx="29.3" cy="53.2" r="2.6" fill="#1A2E4A"/><circle cx="38.9" cy="38.9" r="2.6" fill="#1A2E4A"/><circle cx="53.2" cy="29.3" r="2.6" fill="#1A2E4A"/><circle cx="70" cy="70" r="3.2" fill="#1A2E4A"/></svg></div>
     <div class="launch-body">
       <span class="launch-date">Established 29 July 2026</span>
-      <p>Perialetheia opens on the anniversary of the first publication of <em>The Fellowship of the Ring</em> (29&nbsp;July&nbsp;1954) - a coincidence this laboratory is content to make deliberate. Tolkien&rsquo;s One Ring is, in the language of measurement, a <strong>corrupted reference</strong>: an object every bearer trusts and refers their judgement to, which silently distorts every judgement made against it. Its danger is precisely that it cannot be audited from within by anyone who holds it; the corruption is invisible to the instrument it has captured, and the ring is undone only from outside the system that trusts it. That is the failure this laboratory exists to catch. A reference that cannot be checked against something independent of itself will, when it is wrong, make every measurement founded on it wrong in the same direction and with the same confidence - and no amount of internal consistency will reveal it. Perialetheia&rsquo;s discipline is to name its references, verify them against sources outside the claim, and declare what it cannot yet check.</p>
+      <p>Perialetheia opens on the anniversary of the first publication of <em>The Fellowship of the Ring</em> (29&nbsp;July&nbsp;1954) &mdash; a coincidence this laboratory is content to make deliberate. Tolkien&rsquo;s One Ring is, in the language of measurement, a <strong>corrupted reference</strong>: an object every bearer trusts and refers their judgement to, which silently distorts every judgement made against it. Its danger is precisely that it cannot be audited from within by anyone who holds it; the corruption is invisible to the instrument it has captured, and the ring is undone only from outside the system that trusts it. That is the failure this laboratory exists to catch. A reference that cannot be checked against something independent of itself will, when it is wrong, make every measurement founded on it wrong in the same direction and with the same confidence &mdash; and no amount of internal consistency will reveal it. Perialetheia&rsquo;s discipline is to name its references, verify them against sources outside the claim, and declare what it cannot yet check.</p>
     </div>
   </aside>
 </div>
@@ -255,7 +287,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
     <p class="standfirst">Two ideas underlie everything here. One is a framework for treating belief as a measured quantity; the other is the laboratory that applies it. Neither requires prior familiarity with metrology or with information conflict.</p>
 
     <h3>CWIMF - the measurement framework</h3>
-    <p>The <strong>Cognitive Warfare Information Metrology Framework</strong> treats a claim circulating in the information environment the way a laboratory treats any measurand. A proposition is anchored to a verified truth value; the prevalence of belief in it is measured against that anchor; and the result is reported with a full uncertainty budget in the sense of the <em>Guide to the Expression of Uncertainty in Measurement</em> (GUM). The central quantity is <strong>belief displacement</strong>: how far a population&rsquo;s belief sits from what the verified evidence supports. Displacement is reported the way any measurement is, with a stated coverage interval and an explicit account of what has not been evaluated. The framework borrows its discipline directly from formal metrology - the International Vocabulary of Metrology (VIM), the GUM, and the laboratory-competence standard ISO/IEC&nbsp;17025 - so that a figure about belief carries the same traceability a calibration certificate does.</p>
+    <p>The <strong>Cognitive Warfare Information Metrology Framework</strong> treats a claim circulating in the information environment the way a laboratory treats any measurand. A proposition is anchored to a verified truth value; the prevalence of belief in it is measured against that anchor; and the result is reported with a full uncertainty budget in the sense of the <em>Guide to the Expression of Uncertainty in Measurement</em> (GUM). The central quantity is <strong>belief displacement</strong>: how far a population&rsquo;s belief sits from what the verified evidence supports. Displacement is reported the way any measurement is, with a stated coverage interval and an explicit account of what has not been evaluated. The framework borrows its discipline directly from formal metrology &mdash; the International Vocabulary of Metrology (VIM), the GUM, and the laboratory-competence standard ISO/IEC&nbsp;17025 &mdash; so that a figure about belief carries the same traceability a calibration certificate does.</p>
 
     <h3>CWIAL - the laboratory</h3>
     <p><strong>Perialetheia</strong> is a <strong>Cognitive Warfare Information Analysis Laboratory</strong>: the first working instance (No.&nbsp;1) that applies the framework to real cases. Where CWIMF is the method written down, CWIAL is the bench on which measurements are actually made &mdash; references verified, instruments calibrated, and reports issued clause by clause under an ISO/IEC&nbsp;17025 structure. Each monthly report re-audits one contested figure from the public record and states what can, and what cannot yet, be measured from it.</p>
@@ -264,7 +296,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
       <div><dt>Belief displacement</dt><dd>The signed distance between measured belief and the belief the verified evidence would support. The laboratory&rsquo;s primary measurand.</dd></div>
       <div><dt>Verified reference</dt><dd>A proposition with a stated truth value and a documented source chain. Every measurement is referred to one.</dd></div>
       <div><dt>Uncertainty budget</dt><dd>The itemised account of every source of doubt in a figure, combined per GUM. No result is published without one.</dd></div>
-      <div><dt>Declared gaps</dt><dd>Quantities the record cannot yet support are stated as unmeasured - never omitted, never estimated.</dd></div>
+      <div><dt>Declared gaps</dt><dd>Quantities the record cannot yet support are stated as unmeasured &mdash; never omitted, never estimated.</dd></div>
     </div>
 
     <p class="aboutnote">The name <em>Perialetheia</em> joins <em>peri&#8209;</em> (around, concerning) with <em>al&#275;theia</em> (truth, literally un&#8209;concealment). The laboratory measures how belief stands in relation to what is verified, and treats every gap in that relation as something to be declared rather than hidden.</p>
@@ -273,7 +305,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
 
 <section id="report">
   <div class="wrap">
-    <span class="clause">§7.8 — Reporting of results · Monthly report No. 1</span>
+    <span class="clause">§7.8 - Reporting of results · Monthly report No. 1</span>
     <h2>GM food safety beliefs in Europe</h2>
     <p class="standfirst">A measurement error in the public record, and one anchor measurement that survives it.</p>
 
@@ -287,12 +319,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
 
     <div class="finding">
       <span class="tag">Principal finding</span>
-      <p>The widely cited collapse in European concern about GM food — from <strong>63%&nbsp;(2005)</strong> to <strong>27%&nbsp;(2019)</strong> — spans an undocumented change of survey instrument. On the instrument used in 2005 and 2010, the readings were 63% and 66%: essentially unchanged. The 2019 and 2022 waves switched to a different question format that mechanically lowers every item on the list. No part of the apparent decline can be attributed to belief change until the two formats are harmonised. In metrological terms, an uncharacterised change in the measuring instrument was read as a change in the measurand.</p>
+      <p>The widely cited collapse in European concern about GM food - from <strong>63%&nbsp;(2005)</strong> to <strong>27%&nbsp;(2019)</strong> - spans an undocumented change of survey instrument. On the instrument used in 2005 and 2010, the readings were 63% and 66%: essentially unchanged. The 2019 and 2022 waves switched to a different question format that mechanically lowers every item on the list. No part of the apparent decline can be attributed to belief change until the two formats are harmonised. In metrological terms, an uncharacterised change in the measuring instrument was read as a change in the measurand.</p>
     </div>
 
     <div class="prop">
       <div class="prop-row">
-        <div class="prop-label" style="color:var(--alert)">Tested claim — proposition F</div>
+        <div class="prop-label" style="color:var(--alert)">Tested claim - proposition F</div>
         <div class="prop-claim">“Consuming approved GM food is dangerous to human health.”</div>
       </div>
       <div class="prop-row">
@@ -360,9 +392,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
           <tr><th scope="col">Wave</th><th scope="col">Question format</th><th scope="col">Reading</th><th scope="col">n</th><th scope="col">Bloc</th></tr>
         </thead>
         <tbody>
-          <tr><td>EB 64.3 (2005)</td><td>Concern rating — GM ingredients</td><td class="num">63%</td><td class="num">~25,000</td><td><span class="bloc bloc-b">B</span></td></tr>
-          <tr><td>EFSA wave (2010)</td><td>Concern rating — GM ingredients</td><td class="num">66%</td><td class="num">26,691</td><td><span class="bloc bloc-b">B</span></td></tr>
-          <tr class="anchor"><td>EB 73.1 (2010)</td><td>Health agreement — “not safe for you and your family”</td><td class="num">59%</td><td class="num">31,238</td><td><span class="bloc bloc-a">A</span></td></tr>
+          <tr><td>EB 64.3 (2005)</td><td>Concern rating - GM ingredients</td><td class="num">63%</td><td class="num">~25,000</td><td><span class="bloc bloc-b">B</span></td></tr>
+          <tr><td>EFSA wave (2010)</td><td>Concern rating - GM ingredients</td><td class="num">66%</td><td class="num">26,691</td><td><span class="bloc bloc-b">B</span></td></tr>
+          <tr class="anchor"><td>EB 73.1 (2010)</td><td>Health agreement - “not safe for you and your family”</td><td class="num">59%</td><td class="num">31,238</td><td><span class="bloc bloc-a">A</span></td></tr>
           <tr><td>Special EB (2019)</td><td>Selection from 15-item concern list</td><td class="num">27%</td><td class="num">27,655</td><td><span class="bloc bloc-c">C</span></td></tr>
           <tr><td>Special EB (2022)</td><td>Selection from 15-item concern list</td><td class="num muted">pending</td><td class="num">26,509</td><td><span class="bloc bloc-c">C</span></td></tr>
         </tbody>
@@ -381,7 +413,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
         <text x="700" y="88" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="11.5" fill="#87857F">+1</text>
 
         <rect x="437" y="46" width="122" height="28" fill="#A8760F" fill-opacity="0.13"/>
-        <text x="498" y="112" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="10.5" fill="#A8760F">Type B not evaluated — interval undefined</text>
+        <text x="498" y="112" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="10.5" fill="#A8760F">Type B not evaluated - interval undefined</text>
 
         <line x1="437" y1="46" x2="437" y2="74" stroke="#A8760F" stroke-width="1" stroke-dasharray="3,3"/>
         <line x1="559" y1="46" x2="559" y2="74" stroke="#A8760F" stroke-width="1" stroke-dasharray="3,3"/>
@@ -390,40 +422,98 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
         <circle cx="438" cy="60" r="7" fill="#2E5C8A"/>
         <text x="438" y="36" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" font-weight="600" fill="#2E5C8A">BDI = +0.59</text>
       </svg>
-      <figcaption>The Type A uncertainty on this reading is 0.004 — narrower than the marker itself. The dashed region is not a confidence interval. It marks the absence of one.</figcaption>
+      <figcaption>The Type A uncertainty on this reading is 0.004 - narrower than the marker itself. The dashed region is not a confidence interval. It marks the absence of one.</figcaption>
     </figure>
 
     <div class="readout">
       <dl>
-        <dt>Belief prevalence p — EB 73.1, 2010</dt><dd>0.59</dd>
+        <dt>Belief prevalence p - EB 73.1, 2010</dt><dd>0.59</dd>
         <dt>Aligned prevalence p⁰, where V(F) = FALSE</dt><dd>0</dd>
         <dt>BDI = p − p⁰</dt><dd class="val-key">+0.59</dd>
         <dt>Type A uncertainty u<sub>A</sub> (D<sub>eff</sub> = 1.8, declared)</dt><dd>0.004</dd>
         <dt>Type B components u<sub>B1</sub>…u<sub>B5</sub></dt><dd class="val-none">not evaluated</dd>
-        <dt>Expanded uncertainty U (k = 2)</dt><dd class="val-none">—</dd>
+        <dt>Expanded uncertainty U (k = 2)</dt><dd class="val-none">-</dd>
       </dl>
       <p class="provenance">Source: Gaskell et&nbsp;al., <em>Europeans and Biotechnology in 2010</em>, Eurobarometer 73.1, n&nbsp;=&nbsp;31,238. Topic awareness 84%. The design effect is a declared assumption, not a measured value.</p>
     </div>
 
     <div class="unmeasured">
-      <span class="tag">Not yet measured — and therefore not stated</span>
+      <span class="tag">Not yet measured - and therefore not stated</span>
       <dl>
-        <dt>Type B components for this survey series</dt><dd>—</dd>
-        <dt>Combined and expanded uncertainty</dt><dd>—</dd>
-        <dt>Harmonisation term across the 2010→2019 format change</dt><dd>—</dd>
-        <dt>Cognitive Attack Velocity</dt><dd>—</dd>
-        <dt>Minimum detectable displacement</dt><dd>—</dd>
-        <dt>Projected time to threshold</dt><dd>—</dd>
-        <dt>Per-country breakdowns and the 1996 and 1999 waves</dt><dd>—</dd>
+        <dt>Type B components for this survey series</dt><dd>-</dd>
+        <dt>Combined and expanded uncertainty</dt><dd>-</dd>
+        <dt>Harmonisation term across the 2010→2019 format change</dt><dd>-</dd>
+        <dt>Cognitive Attack Velocity</dt><dd>-</dd>
+        <dt>Minimum detectable displacement</dt><dd>-</dd>
+        <dt>Projected time to threshold</dt><dd>-</dd>
+        <dt>Per-country breakdowns and the 1996 and 1999 waves</dt><dd>-</dd>
       </dl>
       <p>These quantities require the full empirical study now in preparation. A number stated before it is measured is not a measurement, and this laboratory does not publish one.</p>
+    </div>
+
+    <div class="repro" id="data">
+      <span class="clause">§7.8.2 - Data, reproducibility and citation</span>
+      <h3>Take the numbers and check them yourself</h3>
+      <p class="repro-lead">The working uncertainty budget behind this report is published in machine-readable form together with a script that regenerates every figure from its declared inputs. The budget below is a <strong>working annex</strong>: a provisional Type B evaluation offered for independent scrutiny, not the settled on-page reading, which states the anchor with Type A only until the full study is complete.</p>
+      <div class="dl-grid">
+        <a class="dl" href="CWIAL-2026-01_budget.csv" download>
+          <span class="dl-fmt">CSV</span>
+          <span class="dl-name">Uncertainty budget</span>
+          <span class="dl-desc">Every component: type, distribution, divisor, standard uncertainty, variance share.</span>
+        </a>
+        <a class="dl" href="CWIAL-2026-01_budget.json" download>
+          <span class="dl-fmt">JSON</span>
+          <span class="dl-name">Budget + summary</span>
+          <span class="dl-desc">Same budget plus the measurand, anchor, coverage factor and decision, structured for reuse.</span>
+        </a>
+        <a class="dl" href="CWIAL-2026-01_reproduce.py" download>
+          <span class="dl-fmt">PY</span>
+          <span class="dl-name">Reproducibility script</span>
+          <span class="dl-desc">Runnable Python. No data files needed; regenerates the budget and the decision from first inputs.</span>
+        </a>
+      </div>
+
+      <div class="cite">
+        <div class="cite-head">
+          <span class="cite-label">Cite this report</span>
+          <span class="cite-id">PERIALETHEIA-CWIAL-2026-01</span>
+        </div>
+        <p class="cite-plain">Urekar, M. (2026). <em>Belief Displacement in European GM-Food Safety Discourse (Report No. 1)</em>. Perialetheia - Cognitive Warfare Information Analysis Laboratory No. 1. Report PERIALETHEIA-CWIAL-2026-01. A DOI will be minted on completion of the full study.</p>
+        <div class="cite-tabs">
+          <button class="cite-tab is-active" data-target="bibtex" type="button">BibTeX</button>
+          <button class="cite-tab" data-target="ris" type="button">RIS</button>
+        </div>
+        <pre class="cite-block" id="cite-bibtex">@techreport{urekar2026cwial01,
+  author      = {Urekar, Marjan},
+  title       = {Belief Displacement in European GM-Food Safety Discourse (Report No. 1)},
+  institution = {Perialetheia -- Cognitive Warfare Information Analysis Laboratory No.~1},
+  year        = {2026},
+  number      = {PERIALETHEIA-CWIAL-2026-01},
+  note        = {Uncertainty budget after JCGM 100:2008 (GUM); detection after Currie 1968 / ISO 11843-1},
+  url         = {https://perialetheia.org/#report}
+}</pre>
+        <pre class="cite-block" id="cite-ris" hidden>TY  - RPRT
+AU  - Urekar, Marjan
+TI  - Belief Displacement in European GM-Food Safety Discourse (Report No. 1)
+PB  - Perialetheia - Cognitive Warfare Information Analysis Laboratory No. 1
+PY  - 2026
+M1  - PERIALETHEIA-CWIAL-2026-01
+UR  - https://perialetheia.org/#report
+N1  - Uncertainty budget after JCGM 100:2008 (GUM); detection after Currie 1968 / ISO 11843-1
+ER  -</pre>
+        <div class="cite-actions">
+          <button class="cite-copy" type="button" data-copy="cite-bibtex">Copy citation</button>
+          <a class="cite-copy alt" href="CWIAL-2026-01.bib" download>Download .bib</a>
+          <a class="cite-copy alt" href="CWIAL-2026-01.ris" download>Download .ris</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="method">
   <div class="wrap">
-    <span class="clause">§7.2 — Selection and validation of methods</span>
+    <span class="clause">§7.2 - Selection and validation of methods</span>
     <h2>How a measurement is made</h2>
     <p class="standfirst">Five stages, in order. Each one has to complete before the next is meaningful.</p>
     <ol class="steps">
@@ -433,6 +523,37 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
       <li><b>Build the uncertainty budget</b><span>Type A from the sampling. Type B for reference classification risk, instrument bias, temporal mismatch, representativeness, and adversarial adaptation. Combine per GUM.</span></li>
       <li><b>Report, including the gaps</b><span>An ISO/IEC 17025 clause 7.8 report: measurand, reference, method, budget, result with coverage factor, detection capability, and an explicit statement of what was not evaluated.</span></li>
     </ol>
+  </div>
+</section>
+
+<section id="standards">
+  <div class="wrap">
+    <span class="clause">§7.2.1 - Traceability to published standards</span>
+    <h2>The standards this laboratory works to</h2>
+    <p class="standfirst">Every term used here maps onto an established measurement standard. Nothing in the method is invented where an accepted definition already exists.</p>
+    <div class="std-grid">
+      <div class="std">
+        <span class="std-ref">JCGM 200:2012</span>
+        <span class="std-name">VIM - International Vocabulary of Metrology</span>
+        <p>Supplies the core concepts: measurand, reference, calibration, traceability. A belief measurement is defined against a measurand and a reference exactly as any physical measurement is.</p>
+      </div>
+      <div class="std">
+        <span class="std-ref">JCGM 100:2008</span>
+        <span class="std-name">GUM - Guide to the Expression of Uncertainty in Measurement</span>
+        <p>Supplies the uncertainty budget: Type A and Type B components, combination in quadrature, coverage factor and expanded uncertainty. Every reported figure carries a budget built this way.</p>
+      </div>
+      <div class="std">
+        <span class="std-ref">ISO/IEC 17025:2017</span>
+        <span class="std-name">Competence of testing and calibration laboratories</span>
+        <p>Supplies the reporting discipline. Reports follow the clause 7.8 structure: measurand, method, budget, result with coverage factor, and an explicit statement of what was not evaluated.</p>
+      </div>
+      <div class="std">
+        <span class="std-ref">Currie 1968 · ISO 11843-1:1997</span>
+        <span class="std-name">Capability of detection</span>
+        <p>Supplies the decision rule: the critical value a displacement must exceed to be distinguished from zero, and the minimum detectable displacement of the instrument.</p>
+      </div>
+    </div>
+    <p class="std-note">Where this laboratory departs from a standard, it says so and why. Where it follows one, the mapping above is the audit trail.</p>
   </div>
 </section>
 
@@ -469,11 +590,42 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
 
 <footer>
   <div class="wrap">
-    <p>Perialetheia · Cognitive Warfare Information Analysis Laboratory No. 1 · Department of Power, Electronics and Telecommunications, Faculty of Technical Sciences, University of Novi Sad, Republic of Serbia.</p>
+    <p>Perialetheia · Cognitive Warfare Information Analysis Laboratory No. 1</p>
     <p>Currently supported by no one.</p>
-    <p>This laboratory is fully independent and does not represent the position of any government, military, international or extraterrestrial organisation.</p>
+    <p>This laboratory is independent and does not represent the position of any government, military, international or extraterrestrial organisation.</p>
   </div>
 </footer>
+
+
+<script>
+(function(){
+  document.querySelectorAll('.cite-tab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      var target=tab.getAttribute('data-target');
+      document.querySelectorAll('.cite-tab').forEach(function(t){t.classList.toggle('is-active',t===tab);});
+      document.getElementById('cite-bibtex').hidden = (target!=='bibtex');
+      document.getElementById('cite-ris').hidden = (target!=='ris');
+      var copyBtn=document.querySelector('.cite-copy[data-copy]');
+      if(copyBtn) copyBtn.setAttribute('data-copy', target==='bibtex'?'cite-bibtex':'cite-ris');
+    });
+  });
+  var copyBtn=document.querySelector('.cite-copy[data-copy]');
+  if(copyBtn){
+    copyBtn.addEventListener('click',function(){
+      var el=document.getElementById(copyBtn.getAttribute('data-copy'));
+      if(!el) return;
+      var txt=el.textContent;
+      navigator.clipboard.writeText(txt).then(function(){
+        var orig=copyBtn.textContent; copyBtn.textContent='Copied';
+        setTimeout(function(){copyBtn.textContent=orig;},1400);
+      }).catch(function(){
+        var r=document.createRange(); r.selectNode(el);
+        window.getSelection().removeAllRanges(); window.getSelection().addRange(r);
+      });
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
