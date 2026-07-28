@@ -3,7 +3,7 @@
 Public site for the Cognitive Warfare Information Analysis Laboratory No. 1,
 Faculty of Technical Sciences, University of Novi Sad.
 
-**Live at:** https://marjanurekar.github.io/cwial-website/
+**Live at:** https://marjanurekar.github.io/perialetheia/
 
 ## What this is
 
@@ -34,4 +34,3 @@ contents of that section and update the `§7.8` line and the `<h2>`. Keep the
 
 - Measurement toolkit: https://github.com/marjanurekar/cwial-toolkit
 - Contact: urekarm@uns.ac.rs · ORCID 0000-0002-6089-9148
-

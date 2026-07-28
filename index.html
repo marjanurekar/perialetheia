@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CWIAL No. 1 — Cognitive Warfare Information Analysis Laboratory No. 1 - "Perialetheia"</title>
-<meta name="description" content="A metrology laboratory for cognitive warfare analysis. Every published figure is traceable to a named source, and every quantity not yet measured is declared as unmeasured.">
-<meta property="og:title" content="CWIAL No. 1 — Cognitive Warfare Information Analysis Laboratory "Perialeteia"">
+<title>Perialetheia — Cognitive Warfare Information Analysis Laboratory No. 1</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2214%22%20fill%3D%22%231A2E4A%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2229%22%20fill%3D%22none%22%20stroke%3D%22%23F7F7F5%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%22123%2059%22%20transform%3D%22rotate%28-118%2050%2050%29%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2229%22%20fill%3D%22none%22%20stroke%3D%22%23E8B85B%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-dasharray%3D%228%2011%22%20stroke-dashoffset%3D%22-125%22%20transform%3D%22rotate%28-118%2050%2050%29%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%229%22%20fill%3D%22%23F7F7F5%22%2F%3E%3C%2Fsvg%3E">
+<meta name="description" content="Perialetheia. A metrology laboratory for cognitive warfare. Every published figure is traceable to a named source, and every quantity not yet measured is declared as unmeasured.">
+<meta property="og:title" content="Perialetheia — Cognitive Warfare Information Analysis Laboratory No. 1">
 <meta property="og:description" content="Applying VIM, GUM and ISO/IEC 17025 to the measurement of belief displacement.">
 <meta property="og:type" content="website">
 <style>
@@ -34,14 +35,22 @@ body{
 /* ---------- masthead ---------- */
 .masthead{border-bottom:1px solid var(--rule-strong);position:sticky;top:0;background:var(--paper);z-index:20}
 .masthead .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
-.brand{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);font-weight:600}
-.brand span{color:var(--steel);font-weight:400}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none}
+.brandmark{width:26px;height:26px;flex:0 0 auto;display:block}
+.brandword{height:13px;width:164px;flex:0 0 auto;display:block}
+.brandnum{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--steel);padding-top:2px}
+@media(max-width:520px){.brandword{height:11px;width:139px}.brandnum{display:none}}
 .masthead nav{display:flex;gap:20px;flex-wrap:wrap}
 .masthead a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:#5E5C57;text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
 .masthead a:hover,.masthead a:focus-visible{color:var(--navy);border-bottom-color:var(--steel)}
 
 /* ---------- hero ---------- */
-.hero{padding:64px 0 52px;border-bottom:1px solid var(--rule)}
+.herologo{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:42px}
+.herologo-mark{width:74px;height:74px;display:block;margin-bottom:20px}
+.herologo-word{width:min(500px,82vw);height:auto;display:block}
+.herologo-sub{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin-top:16px}
+@media(max-width:520px){.herologo-mark{width:58px;height:58px}.herologo-sub{font-size:9.5px;letter-spacing:.1em}}
+.hero{padding:56px 0 52px;border-bottom:1px solid var(--rule)}
 .hero h1{
   font-size:clamp(30px,5.2vw,46px);line-height:1.12;font-weight:650;
   letter-spacing:-.022em;color:var(--navy);max-width:16ch;margin-bottom:22px;
@@ -125,20 +134,43 @@ ol.steps li::before{
 ol.steps b{display:block;font-size:15px;color:var(--navy);margin-bottom:3px}
 ol.steps span{font-size:14.5px;color:#4A4B4F}
 
+
+/* ---------- about / define ---------- */
+.define{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 6px}
+.define div{background:var(--paper);padding:14px 16px}
+.define dt{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--navy);font-weight:600;margin-bottom:5px}
+.define dd{font-size:13.5px;color:#4A4B4F;line-height:1.55}
+.aboutnote{font-size:13.5px;color:#6B6960;font-style:italic;margin-top:22px;border-top:1px solid var(--rule);padding-top:16px}
+/* ---------- launch note ---------- */
+.launch{display:flex;gap:22px;align-items:flex-start;border:1px solid var(--rule-strong);border-left:3px solid var(--pending);background:#FCF9F2;padding:22px 24px;margin:38px 0 4px}
+.launch-motif{flex:0 0 auto;width:96px;height:96px}
+.launch-motif svg{width:96px;height:96px;display:block}
+.launch-date{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--pending);font-weight:600;display:block;margin-bottom:9px}
+.launch-body p{font-size:14.5px;color:#4A4B4F;line-height:1.6}
+.launch-body strong{color:var(--navy)}
+@media(max-width:600px){.launch{flex-direction:column;gap:14px;align-items:center}.launch-motif{width:80px;height:80px}.launch-motif svg{width:80px;height:80px}}
+/* ---------- report series nav ---------- */
+.reportnav{border:1px solid var(--rule-strong);background:#F1F1EE;padding:14px 18px;margin-bottom:30px}
+.reportnav-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);display:block;margin-bottom:10px}
+.reportnav-list{list-style:none}
+.reportnav-list li{font-size:14px;color:#55565B;padding:5px 0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.reportnav-list .rn-no{font-family:var(--mono);font-size:12px;color:var(--navy);font-weight:600;flex:0 0 auto}
+.reportnav-list li.is-current{color:var(--ink);font-weight:600}
+.rn-status{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--verified);border:1px solid currentColor;border-radius:2px;padding:1px 6px}
+.rn-status.rn-pending{color:var(--pending)}
+
 /* ---------- publications ---------- */
 .pubs{list-style:none}
 .pubs li{padding:15px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline}
 .pubs li:last-child{border-bottom:none}
 .pubs .venue{font-family:var(--mono);font-size:11px;color:var(--steel);letter-spacing:.03em;white-space:nowrap}
 .pubs .title{font-size:15px;color:var(--ink)}
+.pubs .title a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--steel)}
+.pubs .title a:hover,.pubs .title a:focus-visible{color:var(--steel)}
 .pubs .meta{display:block;font-family:var(--mono);font-size:11.5px;color:#87857F;margin-top:3px}
 @media(max-width:640px){.pubs li{grid-template-columns:1fr;gap:4px}}
+.pubnote{font-size:13.5px;color:#6B6960;margin-top:18px;max-width:62ch}
 
-/* ---------- roles ---------- */
-.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:8px}
-.roles div{background:var(--paper);padding:16px 18px}
-.roles h4{font-size:14px;font-weight:640;color:var(--navy);margin-bottom:5px}
-.roles p{font-size:13.5px;color:#55565B}
 
 /* ---------- contact ---------- */
 .contact{border:1px solid var(--navy);padding:22px 24px;margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
@@ -159,8 +191,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
 
 <header class="masthead">
   <div class="wrap">
-    <div class="brand">CWIAL <span>No.&nbsp;1</span></div>
+    <a class="brand" href="#" aria-label="Perialetheia — home">
+      <svg class="brandmark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#1A2E4A" stroke-width="9" stroke-linecap="round" stroke-dasharray="140 67" transform="rotate(-118 50 50)"/>
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#A8760F" stroke-width="9" stroke-linecap="round" stroke-dasharray="9 12" stroke-dashoffset="-142" transform="rotate(-118 50 50)"/>
+        <circle cx="50" cy="50" r="11" fill="#1A2E4A"/>
+      </svg>
+      <svg class="brandword" viewBox="0 0 1261.6 100" aria-hidden="true" focusable="false"><g fill="#1A2E4A" transform="scale(0.06978367062107467) translate(0,1433) scale(1,-1)"><path transform="translate(0,0)" d="M403 1327V766H657Q798 766 875.0 839.0Q952 912 952 1047Q952 1181 875.0 1254.0Q798 1327 657 1327ZM201 1493H657Q908 1493 1036.5 1379.5Q1165 1266 1165 1047Q1165 826 1036.5 713.0Q908 600 657 600H403V0H201Z"/><path transform="translate(1562,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(3183,0)" d="M909 700Q974 678 1035.5 606.0Q1097 534 1159 408L1364 0H1147L956 383Q882 533 812.5 582.0Q743 631 623 631H403V0H201V1493H657Q913 1493 1039.0 1386.0Q1165 1279 1165 1063Q1165 922 1099.5 829.0Q1034 736 909 700ZM403 1327V797H657Q803 797 877.5 864.5Q952 932 952 1063Q952 1194 877.5 1260.5Q803 1327 657 1327Z"/><path transform="translate(4933,0)" d="M201 1493H403V0H201Z"/><path transform="translate(5864,0)" d="M700 1294 426 551H975ZM586 1493H815L1384 0H1174L1038 383H365L229 0H16Z"/><path transform="translate(7592,0)" d="M201 1493H403V170H1130V0H201Z"/><path transform="translate(9060,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(10681,0)" d="M-6 1493H1257V1323H727V0H524V1323H-6Z"/><path transform="translate(12259,0)" d="M201 1493H403V881H1137V1493H1339V0H1137V711H403V0H201Z"/><path transform="translate(14126,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(15747,0)" d="M201 1493H403V0H201Z"/><path transform="translate(16678,0)" d="M700 1294 426 551H975ZM586 1493H815L1384 0H1174L1038 383H365L229 0H16Z"/></g></svg>
+      <span class="sr">Perialetheia</span>
+    </a>
     <nav>
+      <a href="#about">About</a>
       <a href="#report">Monthly report</a>
       <a href="#method">Method</a>
       <a href="#publications">Publications</a>
@@ -173,8 +214,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
 
 <div class="wrap">
   <div class="hero">
-    <h1>We publish what we measured, the uncertainty on it, and also<em>what we have not measured.</em></h1>
-    <p>CWIAL No.&nbsp;1 applies formal measurement science — the International Vocabulary of Metrology, the GUM uncertainty framework, and ISO/IEC&nbsp;17025 — to belief displacement in the information environment. Every figure here is traceable to a named source. Every quantity we have not yet evaluated is stated as unevaluated rather than omitted.</p>
+    <div class="herologo">
+      <svg class="herologo-mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#1A2E4A" stroke-width="8" stroke-linecap="round" stroke-dasharray="140 67" transform="rotate(-118 50 50)"/>
+        <circle cx="50" cy="50" r="33" fill="none" stroke="#A8760F" stroke-width="8" stroke-linecap="round" stroke-dasharray="9 12" stroke-dashoffset="-142" transform="rotate(-118 50 50)"/>
+        <circle cx="50" cy="50" r="11" fill="#1A2E4A"/>
+      </svg>
+      <svg class="herologo-word" viewBox="0 0 1261.6 100" fill="#1A2E4A" aria-label="Perialetheia" role="img"><g transform="scale(0.06978367062107467) translate(0,1433) scale(1,-1)"><path transform="translate(0,0)" d="M403 1327V766H657Q798 766 875.0 839.0Q952 912 952 1047Q952 1181 875.0 1254.0Q798 1327 657 1327ZM201 1493H657Q908 1493 1036.5 1379.5Q1165 1266 1165 1047Q1165 826 1036.5 713.0Q908 600 657 600H403V0H201Z"/><path transform="translate(1562,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(3183,0)" d="M909 700Q974 678 1035.5 606.0Q1097 534 1159 408L1364 0H1147L956 383Q882 533 812.5 582.0Q743 631 623 631H403V0H201V1493H657Q913 1493 1039.0 1386.0Q1165 1279 1165 1063Q1165 922 1099.5 829.0Q1034 736 909 700ZM403 1327V797H657Q803 797 877.5 864.5Q952 932 952 1063Q952 1194 877.5 1260.5Q803 1327 657 1327Z"/><path transform="translate(4933,0)" d="M201 1493H403V0H201Z"/><path transform="translate(5864,0)" d="M700 1294 426 551H975ZM586 1493H815L1384 0H1174L1038 383H365L229 0H16Z"/><path transform="translate(7592,0)" d="M201 1493H403V170H1130V0H201Z"/><path transform="translate(9060,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(10681,0)" d="M-6 1493H1257V1323H727V0H524V1323H-6Z"/><path transform="translate(12259,0)" d="M201 1493H403V881H1137V1493H1339V0H1137V711H403V0H201Z"/><path transform="translate(14126,0)" d="M201 1493H1145V1323H403V881H1114V711H403V170H1163V0H201Z"/><path transform="translate(15747,0)" d="M201 1493H403V0H201Z"/><path transform="translate(16678,0)" d="M700 1294 426 551H975ZM586 1493H815L1384 0H1174L1038 383H365L229 0H16Z"/></g></svg>
+      <div class="herologo-sub">Cognitive Warfare Information Analysis Laboratory No.&nbsp;1</div>
+    </div>
+    <h1>We publish what we measured, the uncertainty on it, and <em>what we have not measured.</em></h1>
+    <p>Perialetheia applies formal measurement science — the International Vocabulary of Metrology, the GUM uncertainty framework, and ISO/IEC&nbsp;17025 — to belief displacement in the information environment. Every figure here is traceable to a named source. Every quantity we have not yet evaluated is stated as unevaluated rather than omitted.</p>
     <dl class="identity">
       <div><dt>Framework</dt><dd>CWIMF</dd></div>
       <div><dt>Measurands</dt><dd>BDI · NCS · CAV · ISRG</dd></div>
@@ -184,11 +234,54 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
   </div>
 </div>
 
+
+
+<div class="wrap">
+  <aside class="launch" aria-label="Launch note">
+    <div class="launch-motif"><svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 140 140" role="img" aria-label="A ring bearing a uniform inscription of dots in which one mark is a displaced square touching the ring"><circle cx="70" cy="70" r="50" fill="none" stroke="#1A2E4A" stroke-width="2.4"/><circle cx="70" cy="70" r="38" fill="none" stroke="#1A2E4A" stroke-width="2.4"/><circle cx="70.0" cy="26.0" r="2.6" fill="#1A2E4A"/><circle cx="86.8" cy="29.3" r="2.6" fill="#1A2E4A"/><circle cx="101.1" cy="38.9" r="2.6" fill="#1A2E4A"/><circle cx="110.7" cy="53.2" r="2.6" fill="#1A2E4A"/><circle cx="114.0" cy="70.0" r="2.6" fill="#1A2E4A"/><rect x="-2.3" y="-2.3" width="4.6" height="4.6" fill="#1A2E4A" transform="translate(112.1,87.4) rotate(68)"/><circle cx="101.1" cy="101.1" r="2.6" fill="#1A2E4A"/><circle cx="86.8" cy="110.7" r="2.6" fill="#1A2E4A"/><circle cx="70.0" cy="114.0" r="2.6" fill="#1A2E4A"/><circle cx="53.2" cy="110.7" r="2.6" fill="#1A2E4A"/><circle cx="38.9" cy="101.1" r="2.6" fill="#1A2E4A"/><circle cx="29.3" cy="86.8" r="2.6" fill="#1A2E4A"/><circle cx="26.0" cy="70.0" r="2.6" fill="#1A2E4A"/><circle cx="29.3" cy="53.2" r="2.6" fill="#1A2E4A"/><circle cx="38.9" cy="38.9" r="2.6" fill="#1A2E4A"/><circle cx="53.2" cy="29.3" r="2.6" fill="#1A2E4A"/><circle cx="70" cy="70" r="3.2" fill="#1A2E4A"/></svg></div>
+    <div class="launch-body">
+      <span class="launch-date">Established 29 July 2026</span>
+      <p>Perialetheia opens on the anniversary of the first publication of <em>The Fellowship of the Ring</em> (29&nbsp;July&nbsp;1954) &mdash; a coincidence this laboratory is content to make deliberate. Tolkien&rsquo;s One Ring is, in the language of measurement, a <strong>corrupted reference</strong>: an object every bearer trusts and refers their judgement to, which silently distorts every judgement made against it. Its danger is precisely that it cannot be audited from within by anyone who holds it; the corruption is invisible to the instrument it has captured, and the ring is undone only from outside the system that trusts it. That is the failure this laboratory exists to catch. A reference that cannot be checked against something independent of itself will, when it is wrong, make every measurement founded on it wrong in the same direction and with the same confidence &mdash; and no amount of internal consistency will reveal it. Perialetheia&rsquo;s discipline is to name its references, verify them against sources outside the claim, and declare what it cannot yet check.</p>
+    </div>
+  </aside>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <span class="clause">Orientation · for readers new to the laboratory</span>
+    <h2>What this laboratory is</h2>
+    <p class="standfirst">Two ideas underlie everything here. One is a framework for treating belief as a measured quantity; the other is the laboratory that applies it. Neither requires prior familiarity with metrology or with information conflict.</p>
+
+    <h3>CWIMF — the measurement framework</h3>
+    <p>The <strong>Cognitive Warfare Information Metrology Framework</strong> treats a claim circulating in the information environment the way a laboratory treats any measurand. A proposition is anchored to a verified truth value; the prevalence of belief in it is measured against that anchor; and the result is reported with a full uncertainty budget in the sense of the <em>Guide to the Expression of Uncertainty in Measurement</em> (GUM). The central quantity is <strong>belief displacement</strong>: how far a population&rsquo;s belief sits from what the verified evidence supports. Displacement is reported the way any measurement is, with a stated coverage interval and an explicit account of what has not been evaluated. The framework borrows its discipline directly from formal metrology &mdash; the International Vocabulary of Metrology (VIM), the GUM, and the laboratory-competence standard ISO/IEC&nbsp;17025 &mdash; so that a figure about belief carries the same traceability a calibration certificate does.</p>
+
+    <h3>CWIAL — the laboratory</h3>
+    <p><strong>Perialetheia</strong> is a <strong>Cognitive Warfare Information Analysis Laboratory</strong>: the first working instance (No.&nbsp;1) that applies the framework to real cases. Where CWIMF is the method written down, CWIAL is the bench on which measurements are actually made &mdash; references verified, instruments calibrated, and reports issued clause by clause under an ISO/IEC&nbsp;17025 structure. Each monthly report re-audits one contested figure from the public record and states what can, and what cannot yet, be measured from it.</p>
+
+    <div class="define">
+      <div><dt>Belief displacement</dt><dd>The signed distance between measured belief and the belief the verified evidence would support. The laboratory&rsquo;s primary measurand.</dd></div>
+      <div><dt>Verified reference</dt><dd>A proposition with a stated truth value and a documented source chain. Every measurement is referred to one.</dd></div>
+      <div><dt>Uncertainty budget</dt><dd>The itemised account of every source of doubt in a figure, combined per GUM. No result is published without one.</dd></div>
+      <div><dt>Declared gaps</dt><dd>Quantities the record cannot yet support are stated as unmeasured &mdash; never omitted, never estimated.</dd></div>
+    </div>
+
+    <p class="aboutnote">The name <em>Perialetheia</em> joins <em>peri&#8209;</em> (around, concerning) with <em>al&#275;theia</em> (truth, literally un&#8209;concealment). The laboratory measures how belief stands in relation to what is verified, and treats every gap in that relation as something to be declared rather than hidden.</p>
+  </div>
+</section>
+
 <section id="report">
   <div class="wrap">
     <span class="clause">§7.8 — Reporting of results · Monthly report No. 1</span>
     <h2>GM food safety beliefs in Europe</h2>
     <p class="standfirst">A measurement error in the public record, and one anchor measurement that survives it.</p>
+
+    <div class="reportnav" role="note">
+      <span class="reportnav-label">Report series</span>
+      <ol class="reportnav-list">
+        <li class="is-current"><span class="rn-no">No.&nbsp;1</span> GM food safety beliefs in Europe <span class="rn-status">current</span></li>
+        <li><span class="rn-no">No.&nbsp;2</span> Belief displacement in the Brexit referendum record <span class="rn-status rn-pending">in preparation</span></li>
+      </ol>
+    </div>
 
     <div class="finding">
       <span class="tag">Principal finding</span>
@@ -349,57 +442,20 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
     <ul class="pubs">
       <li>
         <span class="venue">IcETRAN 2026</span>
-        <span class="title">Ten Metrological Principles for Understanding and Countering Cognitive Warfare
-          <span class="meta">Published · doi 10.69994/13Ic26xxx</span></span>
-      </li>
-      <li>
-        <span class="venue">Conference</span>
-        <span class="title">CWIMF: Architecture, Components, and Institutional Design
-          <span class="meta">Framework architecture and institutional design</span></span>
-      </li>
-      <li>
-        <span class="venue">Conference</span>
-        <span class="title">Information Integrity as a Metrological Requirement: Misinformation Risks in ISO/IEC 17025 Laboratories Through the OODA Decision Loop
-          <span class="meta">Laboratory information integrity</span></span>
-      </li>
-      <li>
-        <span class="venue">Journal · submitted</span>
-        <span class="title">CWIMF: A Formal Measurement Architecture Based on VIM, GUM, and ISO/IEC 17025
-          <span class="meta">Full specification · worked uncertainty budget · Monte Carlo validation</span></span>
-      </li>
-      <li>
-        <span class="venue">In preparation</span>
-        <span class="title">Quantifying Belief Displacement in European GMO Safety Discourse: A Longitudinal Metrological Re-Audit of the Eurobarometer Record
-          <span class="meta">The empirical study behind this month's report</span></span>
-      </li>
-      <li>
-        <span class="venue">In preparation</span>
-        <span class="title">Calibrating Large Language Models as Narrative Coherence Scoring Instruments
-          <span class="meta">Proposed validation framework · specification, not measurement</span></span>
+        <span class="title"><a href="https://www.researchgate.net/publication/406976343_Ten_Metrological_Principles_for_Understanding_and_Countering_Cognitive_Warfare" target="_blank" rel="noopener">Ten Metrological Principles for Understanding and Countering Cognitive Warfare</a>
+          <span class="meta">13th Int. Conf. on Electrical, Electronic and Computing Engineering (IcETRAN), Silver Lake, Serbia · to be indexed in IEEE Xplore</span></span>
       </li>
     </ul>
-    html
-<p style="margin-top:24px;font-size:14px">
-  Measurement toolkit and reproducible code:
-  <a href="https://github.com/marjanurekar/cwial-toolkit"
-     style="color:#2E5C8A">github.com/marjanurekar/cwial-toolkit</a>
-</p>
-
+    <p class="pubnote">This is the only work published to date. Further papers &mdash; the framework specification, the laboratory information-integrity study, and the empirical re-audits behind these monthly reports &mdash; will be listed here as each is published.</p>
   </div>
 </section>
 
 <section id="join">
   <div class="wrap">
-    <span class="clause">§6.2 — Personnel</span>
-    <h2>Join the laboratory</h2>
+    <span class="clause">Participation</span>
+    <h2>Working with the laboratory</h2>
     <p class="standfirst">No prior expertise in cognitive warfare is required. The measurement discipline is learnable; the willingness to state what you do not know is the harder part.</p>
-    <div class="roles">
-      <div><h4>Reference curator</h4><p>Build and verify VFRB entries. Source evaluation and provenance chains.</p></div>
-      <div><h4>Instrument engineer</h4><p>Calibrate the classifiers that score factual consistency. Python and basic ML.</p></div>
-      <div><h4>Survey methodologist</h4><p>Instrument design, Type A uncertainty, design-effect corrections.</p></div>
-      <div><h4>Adversarial analyst</h4><p>Model how attackers adapt to being measured. The most open-ended role.</p></div>
-      <div><h4>Case researcher</h4><p>Apply the toolkit to documented cases. Each case study is a publishable paper.</p></div>
-    </div>
+    <p>The laboratory is not running a public call at this time. Involvement is arranged in person, case by case, with contributors who want to apply the measurement discipline to a documented case, curate and verify references, or help calibrate the instruments the method depends on. If that interests you, get in touch directly.</p>
     <div class="contact">
       <p><strong>Interested in contributing?</strong><br>Marjan Urekar · Faculty of Technical Sciences, University of Novi Sad</p>
       <a href="mailto:urekarm@uns.ac.rs">urekarm@uns.ac.rs</a>
@@ -411,7 +467,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
 
 <footer>
   <div class="wrap">
-    <p>CWIAL No. 1 · Department of Power, Electronics and Telecommunications, Faculty of Technical Sciences, University of Novi Sad, Republic of Serbia.</p>
+    <p>Perialetheia · Cognitive Warfare Information Analysis Laboratory No. 1 · Department of Power, Electronics and Telecommunications, Faculty of Technical Sciences, University of Novi Sad, Republic of Serbia.</p>
     <p>Supported by the Ministry of Science, Technological Development and Innovation of the Republic of Serbia, Contract No. 451-03-34/2026-03/200156.</p>
     <p>This laboratory is independent and does not represent the position of any government, military, or international organisation.</p>
   </div>
