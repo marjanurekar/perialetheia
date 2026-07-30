@@ -218,6 +218,9 @@ footer a{color:#5E5C57}
 
 a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offset:3px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  footer .footer-meta{margin-top:10px}
+  footer .footer-meta a{color:var(--amber,#A8760F);text-decoration:none;border-bottom:1px solid transparent}
+  footer .footer-meta a:hover{border-bottom-color:currentColor}
 </style>
 </head>
 <body>
@@ -263,7 +266,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--steel);outline-offs
       <div><dt>Framework</dt><dd>CWIMF</dd></div>
       <div><dt>Measurands</dt><dd>BDI · NCS · CAV · ISRG</dd></div>
       <div><dt>Reference standard</dt><dd>VFRB</dd></div>
-      <div><dt>Location</dt><dd>Novi Sad, Vojvodina, Serbia</dd></div>
+      <div><dt>Host institution</dt><dd>Faculty of Technical Sciences, Novi Sad</dd></div>
     </dl>
   </div>
 </div>
@@ -552,6 +555,11 @@ ER  -</pre>
         <span class="std-name">Capability of detection</span>
         <p>Supplies the decision rule: the critical value a displacement must exceed to be distinguished from zero, and the minimum detectable displacement of the instrument. Both characterise what the instrument can resolve rather than what a population believes. Where the null state cannot be physically prepared - no population has ever held a false belief at zero prevalence - this laboratory reports them as capability statements, and rests its substantive claims on differences, where a null of no change is attainable.</p>
       </div>
+      <div class="std">
+        <span class="std-ref">ISO/IEC 42001:2023</span>
+        <span class="std-name">AI management systems</span>
+        <p>Governs the AI components the laboratory uses as instruments - the language-model classifiers that score narrative consistency and screen sources. It requires that each be validated before use, operated with documented uncertainty, and monitored for bias and drift, so that a figure produced with the help of a model carries the same accountability as one from any other instrument.</p>
+      </div>
     </div>
     <p class="std-note">Where this laboratory departs from a standard, it says so and why. Where it follows one, the mapping above is the audit trail.</p>
   </div>
@@ -561,7 +569,7 @@ ER  -</pre>
   <div class="wrap">
     <span class="clause">Publications</span>
     <h2>The method, written down</h2>
-    <p class="standfirst">M. Urekar · ORCID 0000-0002-6089-9148</p>
+    <p class="standfirst">M. Urekar · Faculty of Technical Sciences, University of Novi Sad · ORCID 0000-0002-6089-9148</p>
     <ul class="pubs">
       <li>
         <span class="venue">IcETRAN 2026</span>
@@ -580,7 +588,7 @@ ER  -</pre>
     <p class="standfirst">No prior expertise in cognitive warfare is required. The measurement discipline is learnable; the willingness to state what you do not know is the harder part.</p>
     <p>The laboratory is not running a public call at this time. Involvement is arranged in person, case by case, with contributors who want to apply the measurement discipline to a documented case, curate and verify references, or help calibrate the instruments the method depends on. If that interests you, get in touch directly.</p>
     <div class="contact">
-      <p><strong>Interested in contributing?</strong><br>Marjan Urekar</p>
+      <p><strong>Interested in contributing?</strong><br>Marjan Urekar · Faculty of Technical Sciences, University of Novi Sad</p>
       <a href="mailto:urekarm@uns.ac.rs">urekarm@uns.ac.rs</a>
     </div>
   </div>
@@ -593,6 +601,7 @@ ER  -</pre>
     <p>Perialetheia · Cognitive Warfare Information Analysis Laboratory No. 1</p>
     <p>Currently supported by no one.</p>
     <p>This laboratory is independent and does not represent the position of any government, military, international or extraterrestrial organisation.</p>
+    <p class="footer-meta"><a href="perialetheia-identity.svg">Visual identity</a></p>
   </div>
 </footer>
 
