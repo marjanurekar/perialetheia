@@ -1,0 +1,145 @@
+{
+  "report_id": "PERIALETHEIA-CWIAL-2026-02",
+  "measurand": "BDI - belief displacement index for proposition UK-EU-350M-2016",
+  "proposition": {
+    "id": "UK-EU-350M-2016",
+    "text": "The UK sends GBP 350 million per week to the European Union.",
+    "truth_value": "FALSE",
+    "vfrb_tier": 2,
+    "basis": "GBP 350m is a gross figure before the UK rebate. For 2016/17 HM Treasury reports gross GBP 16.9bn (~GBP 325m/week), GBP 12.2bn after the GBP 4.8bn rebate (~GBP 235m/week), and GBP 8.1bn net of public-sector receipts (~GBP 156m/week). The UK Statistics Authority statement of 27 May 2016 established that gross-for-net use was misleading; it issued no net estimate of its own.",
+    "independent_truth_value_sources": 2,
+    "declared_minimum_sources": 3,
+    "shortfall_declared": true,
+    "shortfall_note": "UK Statistics Authority and HM Treasury are not fully independent: the Authority comments on Treasury and ONS figures. The KCL/Ipsos MORI survey is the instrument, not a source for V(F), and is registered as such."
+  },
+  "population": "GB adults aged 18-75 reporting awareness of the proposition, October 2018",
+  "anchor": {
+    "belief_prevalence": 0.42,
+    "aligned_prevalence": 0.0,
+    "bdi": 0.42,
+    "base_n": 1474,
+    "base_n_derived": true,
+    "base_n_note": "Derived as 2200 x 0.67 from published percentages; no claim-aware base is published directly.",
+    "design_effect": 1.8,
+    "design_effect_declared": true
+  },
+  "budget": [
+    {
+      "component": "u_A",
+      "type": "A",
+      "source": "Survey sampling, claim-aware base n=1474 (derived)",
+      "distribution": "-",
+      "divisor": "-",
+      "standard_uncertainty": 0.0172,
+      "variance_share": 0.0511,
+      "note": "D_eff = 1.8 declared, not measured"
+    },
+    {
+      "component": "u_B1_reference_classification",
+      "type": "B",
+      "source": "Truth-value classification risk, VFRB tier 2",
+      "distribution": "normal",
+      "divisor": "k = 2",
+      "standard_uncertainty": 0.03,
+      "variance_share": 0.1545,
+      "note": "Not the numeric range on the net contribution"
+    },
+    {
+      "component": "u_B2_instrument_bias",
+      "type": "B",
+      "source": "Question framing shift",
+      "distribution": "normal",
+      "divisor": "k = 2",
+      "standard_uncertainty": 0.05,
+      "variance_share": 0.4293,
+      "note": "Half-width 0.10 at k = 2"
+    },
+    {
+      "component": "u_B3_temporal_mismatch",
+      "type": "B",
+      "source": "28 months, campaign to measurement",
+      "distribution": "rectangular",
+      "divisor": "sqrt(3)",
+      "standard_uncertainty": 0.026,
+      "variance_share": 0.1161,
+      "note": "Half-width 0.045"
+    },
+    {
+      "component": "u_B4_panel_representativeness",
+      "type": "B",
+      "source": "Opt-in online panel skew",
+      "distribution": "rectangular",
+      "divisor": "sqrt(3)",
+      "standard_uncertainty": 0.035,
+      "variance_share": 0.2104,
+      "note": "Half-width 0.061"
+    },
+    {
+      "component": "u_B5_adversarial_adaptation",
+      "type": "B",
+      "source": "Residual claim reuse after the campaign",
+      "distribution": "triangular",
+      "divisor": "sqrt(6)",
+      "standard_uncertainty": 0.015,
+      "variance_share": 0.0386,
+      "note": "Half-width 0.037"
+    }
+  ],
+  "combined_standard_uncertainty": 0.0763,
+  "coverage_factor": 2,
+  "expanded_uncertainty": 0.1526,
+  "capability": {
+    "critical_value_1p645_uc": 0.1255,
+    "minimum_detectable_displacement_3p29_uc": 0.2511,
+    "response_threshold_3p645_uc": 0.2782,
+    "bdi_over_response_threshold": 1.51,
+    "interpretation": "Capability statements characterise the procedure. They are not a decision against a zero-prevalence null, which is not physically realisable."
+  },
+  "decision": {
+    "issued": false,
+    "reason": "The null of zero prevalence for a verified-false proposition cannot be prepared, so u_0 cannot be measured. Substantive claims rest on differences, where a null of no change is attainable."
+  },
+  "harmonisation": {
+    "wave_2016": {
+      "reading": 0.47,
+      "base": "all GB adults 18+",
+      "awareness": 0.78,
+      "n": 1257,
+      "mode": "telephone",
+      "fieldwork": "11-14 June 2016",
+      "source": "Ipsos MORI Political Monitor, June 2016 topline, Q19/Q20"
+    },
+    "wave_2018": {
+      "reading": 0.42,
+      "base": "claim-aware subsample",
+      "awareness": 0.67,
+      "n": ">2200",
+      "mode": "online panel",
+      "fieldwork": "October 2018",
+      "source": "Policy Institute at KCL / Ipsos MORI / UK in a Changing Europe"
+    },
+    "2018_rebased_to_all_adults": [
+      0.2814,
+      0.6114
+    ],
+    "2016_rebased_to_claim_aware": [
+      0.3205,
+      0.6026
+    ],
+    "result": "Each interval contains the other wave's reading. Neither stability nor change is established.",
+    "missing_quantity": "Endorsement rate among respondents not previously aware of the claim. Measurable in 2016, where belief was asked of all respondents; not reported for 2018."
+  },
+  "not_evaluated": [
+    "harmonisation term for the awareness filter",
+    "delta-BDI across the 2016-2018 pair",
+    "cognitive attack velocity",
+    "mode effect, telephone against online panel",
+    "population term for the 18+ against 18-75 difference",
+    "endogeneity of the claim-aware population to the campaign itself"
+  ],
+  "conventions": {
+    "uncertainty": "JCGM 100:2008 (GUM)",
+    "capability": "Currie 1968 / ISO 11843-1:1997",
+    "reporting": "ISO/IEC 17025:2017 clause 7.8"
+  }
+}

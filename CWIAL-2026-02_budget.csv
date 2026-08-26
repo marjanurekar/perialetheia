@@ -1,0 +1,8 @@
+component,type,source,distribution,divisor,standard_uncertainty,variance_share,note
+u_A,A,"Survey sampling, claim-aware base n=1474 (derived)",-,-,0.0172,0.0511,"D_eff = 1.8 declared, not measured"
+u_B1_reference_classification,B,"Truth-value classification risk, VFRB tier 2",normal,k = 2,0.0300,0.1545,Not the numeric range on the net contribution
+u_B2_instrument_bias,B,Question framing shift,normal,k = 2,0.0500,0.4293,Half-width 0.10 at k = 2
+u_B3_temporal_mismatch,B,"28 months, campaign to measurement",rectangular,sqrt(3),0.0260,0.1161,Half-width 0.045
+u_B4_panel_representativeness,B,Opt-in online panel skew,rectangular,sqrt(3),0.0350,0.2104,Half-width 0.061
+u_B5_adversarial_adaptation,B,Residual claim reuse after the campaign,triangular,sqrt(6),0.0150,0.0386,Half-width 0.037
+u_c,-,Combined standard uncertainty,-,-,0.0763,1.0000,"Quadrature sum, covariance terms dropped explicitly"
