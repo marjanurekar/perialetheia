@@ -8,7 +8,7 @@ Faculty of Technical Sciences, University of Novi Sad.
 ## What this is
 
 A single self-contained `index.html`. No build step, no framework, no external
-requests — it works offline and will still work in ten years. Edit the file,
+requests - it works offline and will still work in ten years. Edit the file,
 commit, and the live site updates within about a minute.
 
 ## Editorial rule
@@ -21,7 +21,7 @@ estimated. If a number cannot be sourced, it does not go on the site.
 
 | File | Purpose |
 |---|---|
-| `index.html` | The entire site — structure, styling, and figures |
+| `index.html` | The entire site - structure, styling, and figures |
 | `README.md` | This file |
 
 ## Updating the monthly report
